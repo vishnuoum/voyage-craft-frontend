@@ -1,0 +1,39 @@
+.chat-text-widget {
+    height: auto;
+    flex: 0 0 auto;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: row;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+}
+
+
+
+.message-edit-area {
+    width: 100%;
+    box-sizing: border-box;
+    margin-right: 10px;
+    border: none;
+    padding: 15px;
+    height: auto;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+}
+
+.message-send-button {
+    display: inline;
+    flex: 1;
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+}
+
+.message-send-button:disabled {
+    color: grey;
+}

@@ -1,0 +1,21 @@
+.group-form input[type=text] {
+    padding: 10px;
+    border: 2px solid white;
+    background-color: rgb(83, 83, 83);
+    color: white;
+}
+
+.group-form input[type=text]::placeholder {
+    color: #b8b7b7;
+}
+
+.group-form input[type=submit] {
+    background-color: white;
+    border: 2px solid white;
+    color: #000;
+}
+
+.group-form input[type=submit]:hover {
+    background-color: black;
+    color: white;
+}

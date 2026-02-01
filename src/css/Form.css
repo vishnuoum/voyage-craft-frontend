@@ -1,0 +1,81 @@
+.container-holder {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.container-holder::after {
+    content: "";
+    background-image: url("../imgs/body-bg.webp");
+    background-size: cover;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.container {
+    padding: 30px;
+    width: 320px;
+    height: auto;
+    display: flex;
+    place-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    filter: drop-shadow(0.35rem 0.35rem 0.6rem rgba(0, 0, 0, 0.1));
+}
+
+.project-title {
+    margin-bottom: 30px;
+    margin-top: 20px;
+    color: #000;
+}
+
+input {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 5px 0px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input.text {
+    background-color: white;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+input[type=submit] {
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+}
+
+input[type=submit]:hover {
+    background-color: white;
+    color: black;
+}
+
+.redirect-link {
+    display: block;
+    color: black;
+    margin-top: 20px;
+}
+
+.redirect-link a {
+    color: black;
+}
