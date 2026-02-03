@@ -37,3 +37,12 @@
 .message-send-button:disabled {
     color: grey;
 }
+
+.create-poll-button {
+    filter: grayscale(100%);
+    border-radius: 50px;
+    padding: 10px;
+    border: none;
+    height: auto;
+    margin-right: 10px;
+}

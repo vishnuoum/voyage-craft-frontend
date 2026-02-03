@@ -1,0 +1,61 @@
+.option-form {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.option-group {
+    display: flex;
+    flex-direction: row;
+}
+
+.option-input {
+    padding: 12px;
+    margin-right: 10px;
+    height: auto;
+    border: 2px solid white;
+    background-color: rgb(83, 83, 83);
+    color: white;
+}
+
+.option-input::placeholder {
+    color: #b8b7b7;
+}
+
+.option-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.add-option-button {
+    align-self: stretch;
+    margin: 10px 0px;
+    padding: 12px;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: white;
+    font-weight: bold;
+}
+
+.add-option-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.submit-option-form {
+    align-self: stretch;
+    color: black;
+    background-color: white;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.submit-option-form:hover {
+    background-color: black;
+    color: white;
+}

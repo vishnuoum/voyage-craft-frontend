@@ -11,6 +11,9 @@ import {
     disconnectSocket
 } from "../services/socket";
 import { useAppContext } from "../context/AppContext";
+import Modal from "../components/Modal";
+import GroupCreateForm from "../components/GroupCreateForm";
+import CreatePollForm from "../components/CreatePollForm";
 
 function Chat() {
     const { groupId } = useParams();
@@ -18,6 +21,8 @@ function Chat() {
     const [messages, setMessages] = useState([]);
     const { group } = location.state || {};
     const { userId, token } = useAppContext();
+
+    const [isPollModalOpen, setPollModalOpen] = useState(false);
 
 
     const addSelfMessage = (message) => {
@@ -50,11 +55,19 @@ function Chat() {
             <Navbar title={group.groupName} />
             <div className="chat-window">
                 {messages.map(message => (
-                    <ChatBubble message={message} userId={userId} />
+                    message.type === "CHAT" && <ChatBubble message={message} userId={userId} />
                 ))}
                 <GroupDescription text={group.description} />
             </div>
-            <ChatTextWidget addMessageFn={sendMessage} />
+            <ChatTextWidget addMessageFn={sendMessage} pollButtonAction={() => setPollModalOpen(true)} />
+
+            <Modal
+                open={isPollModalOpen}
+                title="Open a Poll  📊"
+                onClose={() => setPollModalOpen(false)}
+            >
+                <CreatePollForm onClose={() => setPollModalOpen(false)} />
+            </Modal>
         </div>
     );
 }
